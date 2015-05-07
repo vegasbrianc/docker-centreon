@@ -1,3 +1,4 @@
+[![](https://badge.imagelayers.io/vegasbrianc/docker-centreon.svg)](https://imagelayers.io/?images=vegasbrianc/docker-centreon:latest 'Get your own badge on imagelayers.io')
 # Dockerized Centreon 2.5.2
 
 This is NOT well-tested. Please report all issues/requirements to either of the emails at the bottom of this page.  
