@@ -1,5 +1,5 @@
 [![](https://badge.imagelayers.io/vegasbrianc/docker-centreon.svg)](https://imagelayers.io/?images=vegasbrianc/docker-centreon:latest 'Get your own badge on imagelayers.io')
-# PROJECT DEPRECATED
+# ** PROJECT DEPRECATED **
 
 ## Dockerized Centreon 2.5.2
 
