@@ -1,5 +1,7 @@
 [![](https://badge.imagelayers.io/vegasbrianc/docker-centreon.svg)](https://imagelayers.io/?images=vegasbrianc/docker-centreon:latest 'Get your own badge on imagelayers.io')
-# Dockerized Centreon 2.5.2
+# PROJECT DEPRECATED
+
+## Dockerized Centreon 2.5.2
 
 This is NOT well-tested. Please report all issues/requirements to either of the emails at the bottom of this page.  
 
@@ -8,7 +10,7 @@ while getting it to this stage..
 
 Please report any problems!
 
-## Preparing the host
+### Preparing the host
 
 The configuration files and state data are stored on directories outside the container.
 We will mount external directories for all state that should not vanish when the container is regenerated:
@@ -20,7 +22,7 @@ We will mount external directories for all state that should not vanish when the
 
 You may place these folders somewhere else, just make sure you update the corresponding paths below.
 
-## Building the image
+### Building the image
 
 First step you do with this repo (if you cloned it) is to build it. Note that dot at the end referencing the current directory. Once that is done you have an image that you can run and that is tagged `centeron` for easier reference below.
 
@@ -32,7 +34,7 @@ If your prefer to pull directly from Docker
 
 
 
-## Running the container
+### Running the container
 
 Now that's the easy part, as long as you remember to connect the right volumes:
 
@@ -56,7 +58,7 @@ The need to run the container as a privileged container stems from the need to i
 
 The Centreon daemon `centcore` will not start and end up in a supervisord-FATAL state. That is expected, as the following setup will need to create the configuration files first. Nevertheless, the web interface works already.
 
-## Setting up Centreon
+### Setting up Centreon
 
 Once the container is running, you can reach Centreon under
 
@@ -105,7 +107,7 @@ Now click Save and generate the Nagios configuration files:
 
 Then stop and restart the container to give `centcore` a chance to start.
 
-## Fixing MySQL permissions
+### Fixing MySQL permissions
 
 Centreon sets itself up with MySQL access rights from the IP address that the installation is
 running from. Inside a container, that IP very likely changes on restart, so it needs to be
@@ -117,9 +119,9 @@ Do the same thing in the `mysql.db` database.
 
 Don't forget to `FLUSH PRIVILEGES;` before retrying.
 
-## Troubleshooting
+### Troubleshooting
 
-### NODUtils
+#### NODUtils
 
 It logs to syslog. If you see the following message, you need to increate the kernel parameter `kernel.msgmnb`:
 
